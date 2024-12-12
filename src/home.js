@@ -1,4 +1,5 @@
 function loadHome() {
+    const content = document.querySelector("#content");
     const home = document.createElement("div");
     const headline = document.createElement("h1");
     const attribution = document.createElement("span");
@@ -15,6 +16,7 @@ function loadHome() {
     attribution.append("Photo by ", author, " on ", site);
 
     home.append(headline, attribution);
+    content.append(home);
 };
 
 export default loadHome;
