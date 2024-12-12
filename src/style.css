@@ -46,11 +46,20 @@ button {
 
 body {
     height: 100vh;
+}
+
+body.home {
     background-image: url("./assets/images/sushi-background.jpg");
     background-position: 50% 70%; 
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+}
+
+body.menu {
+    transition: 0.3s;
+    background-color: white;
+    color: black;
 }
 
 nav {
