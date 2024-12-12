@@ -2,7 +2,8 @@ function loadHome() {
     const content = document.querySelector("#content");
     const home = document.createElement("div");
     const headline = document.createElement("h1");
-    const attribution = document.createElement("span");
+    const attributionDiv = document.createElement("span");
+    const attributionSpan = document.createElement("span");
     const author = document.createElement("a");
     const site = document.createElement("a");
 
@@ -13,9 +14,10 @@ function loadHome() {
     author.textContent = "Ahtziri Lagarde";
     site.setAttribute("href", "https://unsplash.com");
     site.textContent = "Unsplash";
-    attribution.append("Photo by ", author, " on ", site);
-
-    home.append(headline, attribution);
+    attributionSpan.append("Photo by ", author, " on ", site);
+    attributionDiv.append(attributionSpan);
+    
+    home.append(headline, attributionDiv);
     content.append(home);
 };
 
