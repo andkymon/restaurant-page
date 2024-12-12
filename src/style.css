@@ -48,7 +48,7 @@ body {
     height: 100vh;
 }
 
-body:has(.home) {
+body:has(#home) {
     background-image: url("./assets/images/sushi-background.jpg");
     background-position: 50% 70%; 
     background-repeat: no-repeat;
@@ -100,7 +100,7 @@ nav > button:hover {
     transform: translateX(-50%);
 }
 
-body:has(.menu){
+body:has(#menu){
     transition: 0.3s;
     background-color: white;
     color: black;
