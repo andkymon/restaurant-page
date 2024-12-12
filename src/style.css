@@ -64,6 +64,10 @@ nav {
     height: 120px;
 }
 
+nav button {
+    width: 100px;
+}
+
 nav > h1 {
     font-family: Cinzel, sans-serif;
     font-size: 3rem;
@@ -75,7 +79,6 @@ nav > button {
     font-size: 1.25rem;
     border: none;
     background-color: transparent;
-    color: inherit;
 }
 
 nav > button:hover {
