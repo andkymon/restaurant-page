@@ -129,6 +129,20 @@ body:has(#menu){
     background-position: center;
     background-size: cover;
     border-radius: 8px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.card > div {
+    width: 100%;
+    border-radius: 0px 0px 8px 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: Cinzel, sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 8px 0px;
 }
 
 .card:hover {
