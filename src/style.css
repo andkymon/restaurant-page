@@ -63,7 +63,7 @@ nav {
 
 nav > h1 {
     font-family: Cinzel, sans-serif;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 100;
 }
 
@@ -78,4 +78,21 @@ nav > button {
 nav > button:hover {
     transform: scale(1.1);
     transition: 0.3s;
+}
+
+#home > h1 {
+    font-family: Cinzel, sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 100;
+}
+
+#home > span {
+    font-family: Montserrat, sans-serif;
+    font-size: 0.8rem;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
