@@ -1,1 +1,3 @@
-alert("test");
+import loadHome from "./home.js"
+loadHome();
+
