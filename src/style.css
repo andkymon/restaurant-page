@@ -40,6 +40,9 @@ p {
 h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
 }
+button {
+    cursor: pointer;
+}
 
 body {
     height: 100vh;
@@ -47,5 +50,32 @@ body {
     background-position: 50% 70%; 
     background-repeat: no-repeat;
     background-size: cover;
+    color: white;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    height: 120px;
+}
+
+nav > h1 {
+    font-family: Cinzel, sans-serif;
+    font-size: 48px;
+    font-weight: 100;
+}
+
+nav > button {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.25rem;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+}
+
+nav > button:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
