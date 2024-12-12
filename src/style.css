@@ -115,3 +115,18 @@ body:has(#menu){
     text-align: center;
     font-weight: 100;
 }
+
+.menu-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px 64px;
+    justify-content: center;
+    gap: 36px;
+}
+
+.card {
+    height: 360px;
+    width: 240px;
+    background-color: aqua;
+    border: 1px solid black;
+}
