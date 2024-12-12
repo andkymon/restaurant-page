@@ -1,3 +1,14 @@
+/*Self-Hosted Fonts*/
+@font-face {
+    font-family: Cinzel;
+    src: url("./assets/fonts/Cinzel.woff2") format('woff2');
+  }
+  
+@font-face {
+    font-family: Montserrat;
+    src: url("./assets/fonts/Montserrat.woff2") format('woff2');
+}
+
 /*
 Josh's Custom CSS Reset
 https://www.joshwcomeau.com/css/custom-css-reset/
@@ -37,3 +48,4 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
