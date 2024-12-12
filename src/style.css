@@ -94,6 +94,7 @@ nav > button:hover {
 }
 
 #attribution {
+    margin-top: 36px;
     font-family: Montserrat, sans-serif;
     font-size: 0.8rem;
     color: black;
@@ -127,3 +128,4 @@ body:has(#menu){
     background-color: aqua;
     border: 1px solid black;
 }
+
