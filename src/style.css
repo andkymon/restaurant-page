@@ -102,7 +102,6 @@ nav > button:hover {
 }
 
 body:has(#menu){
-    transition: 0.3s;
     background-color: white;
     color: black;
 }
@@ -123,6 +122,7 @@ body:has(#menu){
 }
 
 .card {
+    transition: 0.6s;
     height: 320px;
     width: 320px;
     border: 1px solid black;
@@ -134,7 +134,7 @@ body:has(#menu){
     justify-content: center;
 }
 
-.card > div {
+.card > span {
     width: 100%;
     border-radius: 0px 0px 8px 8px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -148,7 +148,14 @@ body:has(#menu){
 .card:hover {
     cursor: pointer;
     transform: scale(1.05);
-    transition: 0.3s;
+    filter: blur(2px) brightness(50%);
+    transition: 0.6s;
+}
+
+.card:hover > span {
+    transition: 0.6s;
+    padding: 0;
+    font-size: 0;
 }
 
 #nigiri1 {
