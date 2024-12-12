@@ -123,9 +123,60 @@ body:has(#menu){
 }
 
 .card {
-    height: 360px;
-    width: 240px;
-    background-color: aqua;
+    height: 320px;
+    width: 320px;
     border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
 }
 
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+#nigiri1 {
+    background-image: url("./assets/images/sake-nigiri.jpg");
+}
+
+#nigiri2 {
+    background-image: url("./assets/images/maguro-nigiri.jpg");
+}
+
+#nigiri3 {
+    background-image: url("./assets/images/ebi-nigiri.jpg");
+}
+
+#nigiri4 {
+    background-image: url("./assets/images/unagi-nigiri.jpg");
+}
+
+#roll1 {
+    background-image: url("./assets/images/sunrise-roll.jpg");
+}
+
+#roll2 {
+    background-image: url("./assets/images/sunset-roll.jpg");
+}
+
+#roll3 {
+    background-image: url("./assets/images/scarlet-ember-roll.jpg");
+}
+
+#roll4 {
+    background-image: url("./assets/images/ruby-tempest-roll.jpg");
+}
+
+#roll5 {
+    background-image: url("./assets/images/crimson-bloom-roll.jpg");
+}
+
+#special1 {
+    background-image: url("./assets/images/kagayaki-roll.jpg");
+}
+
+#special2 {
+    background-image: url("./assets/images/tenshi-roll.jpg");
+}
