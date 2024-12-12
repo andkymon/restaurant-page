@@ -44,16 +44,19 @@ button {
     cursor: pointer;
 }
 
+/*Default - Header Styling*/
 body {
     height: 100vh;
 }
 
-body:has(#home) {
-    background-image: url("./assets/images/sushi-background.jpg");
-    background-position: 50% 70%; 
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
+h1 {
+    font-family: Cinzel, sans-serif;
+    font-weight: 100;
+    text-align: center;
+}
+
+#content h1 {
+    font-size: 4rem;
 }
 
 nav {
@@ -69,9 +72,7 @@ nav button {
 }
 
 nav > h1 {
-    font-family: Cinzel, sans-serif;
     font-size: 3rem;
-    font-weight: 100;
 }
 
 nav > button {
@@ -86,11 +87,13 @@ nav > button:hover {
     transition: 0.3s;
 }
 
-#home > h1 {
-    font-family: Cinzel, sans-serif;
-    font-size: 4rem;
-    text-align: center;
-    font-weight: 100;
+/*Homepage Styling*/
+body:has(#home) {
+    background-image: url("./assets/images/sushi-background.jpg");
+    background-position: 50% 70%; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 
 #attribution {
@@ -101,16 +104,10 @@ nav > button:hover {
     text-align: center;
 }
 
+/*Menu Styling*/
 body:has(#menu){
     background-color: white;
     color: black;
-}
-
-#menu > h1 {
-    font-family: Cinzel, sans-serif;
-    font-size: 4rem;
-    text-align: center;
-    font-weight: 100;
 }
 
 .menu-cards {
@@ -119,13 +116,32 @@ body:has(#menu){
     margin: 16px 64px;
     justify-content: center;
     gap: 36px;
+    font-family: Cinzel, sans-serif;
+}
+
+.menu-cards * {
+    transition: 0.6s;
+}
+
+.card-wrapper {
+    color: white;
+    position: relative;
+}
+
+.order {
+    position: absolute;
+    font-size: 2.5rem;
+    z-index: 1;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .card {
-    transition: 0.6s;
     height: 320px;
     width: 320px;
-    border: 1px solid black;
     background-position: center;
     background-size: cover;
     border-radius: 8px;
@@ -134,30 +150,34 @@ body:has(#menu){
     justify-content: center;
 }
 
-.card > span {
+.dish-name {
     width: 100%;
     border-radius: 0px 0px 8px 8px;
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-family: Cinzel, sans-serif;
     font-size: 1.25rem;
     text-align: center;
     padding: 8px 0px;
 }
 
-.card:hover {
+.card-wrapper:hover {
     cursor: pointer;
     transform: scale(1.05);
-    filter: blur(2px) brightness(50%);
-    transition: 0.6s;
 }
 
-.card:hover > span {
-    transition: 0.6s;
+.card-wrapper:hover > .order {
+    opacity: 1;
+}
+
+.card-wrapper:hover > .card {
+    filter: blur(2px) brightness(50%);
+}
+
+.card-wrapper:hover > .dish-name {
     padding: 0;
     font-size: 0;
 }
 
+/*Entry images*/
 #nigiri1 {
     background-image: url("./assets/images/sake-nigiri.jpg");
 }
