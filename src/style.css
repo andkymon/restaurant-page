@@ -58,6 +58,15 @@ h1 {
     text-align: center;
 }
 
+#content {
+    opacity: 0;
+}
+
+#content.load {
+    transition: 1s;
+    opacity: 1;
+}
+
 #content h1 {
     font-size: 4rem;
 }
