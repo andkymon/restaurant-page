@@ -1,6 +1,7 @@
 import css from "./style.css"
 import loadHome from "./home.js"
 import loadMenu from "./menu.js"
+import loadContact from "./contact.js";
 
 //Event listener for document load
 document.addEventListener("DOMContentLoaded", function() {
@@ -23,6 +24,10 @@ buttons[0].addEventListener("click", () => {
 buttons[1].addEventListener("click", () => {
     clearPage();
     loadMenu();
+});
+buttons[2].addEventListener("click", () => {
+    clearPage();
+    loadContact();
 });
 
 
