@@ -98,7 +98,7 @@ nav > button:hover {
 
 /*Homepage Styling*/
 body:has(#home) {
-    background-image: url("./assets/images/sushi-background.jpg");
+    background-image: url("./assets/images/home-background.jpg");
     background-position: 50% 70%; 
     background-repeat: no-repeat;
     background-size: cover;
@@ -230,4 +230,29 @@ body:has(#menu){
 
 #entry11 {
     background-image: url("./assets/images/unagi-nigiri.jpg");
+}
+
+/*Menu Styling*/
+body:has(#contact){
+    background-color: black;
+    background-image: url("./assets/images/contact-background.jpg");
+    background-position: bottom;
+    background-size: 640px;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+body:has(#contact) button {
+    color: white;
+}
+
+#contact * {
+    backdrop-filter: blur(2px) brightness(50%);
+}
+
+#contact div {
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.25rem;
+    margin: 24px;
 }
