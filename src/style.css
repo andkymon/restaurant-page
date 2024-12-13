@@ -235,7 +235,7 @@ body:has(#menu){
     background-image: url("./assets/images/unagi-nigiri.jpg");
 }
 
-/*Menu Styling*/
+/*Contact and About Styling*/
 body:has(#contact){
     background-color: black;
     background-image: url("./assets/images/contact-background.jpg");
@@ -244,18 +244,34 @@ body:has(#contact){
     color: white;
 }
 
-body:has(#contact) button {
+body:has(#about){
+    background-color: black;
+    background-image: url("./assets/images/about-background.jpg");
+    background-size: cover;
     color: white;
 }
 
-#contact .info {
+body:has(#contact) button,
+body:has(#about) button {
+    color: white;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    padding: 128px;
+}
+
+#contact .info,
+#about .info {
     text-align: center;
     font-family: Montserrat, sans-serif;
     font-size: 1.25rem;
     margin: 24px;
 }
 
-body:has(#contact) #attribution {
+body:has(#contact) #attribution,
+body:has(#about) #attribution {
     position: absolute;
     bottom: 0;
     color: white;
