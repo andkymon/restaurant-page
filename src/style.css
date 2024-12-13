@@ -43,6 +43,9 @@ h1, h2, h3, h4, h5, h6 {
 button {
     cursor: pointer;
 }
+a {
+    color: inherit;
+}
 
 /*Default - Header Styling*/
 body {
@@ -91,7 +94,6 @@ nav > button:hover {
     margin-top: 36px;
     font-family: Montserrat, sans-serif;
     font-size: 0.8rem;
-    color: black;
     text-align: center;
     width: 100%;
 }
@@ -112,6 +114,7 @@ body:has(#home) button {
 body:has(#home) #attribution {
     position: absolute;
     bottom: 0;
+    color: black;
 }
 
 /*Menu Styling*/
@@ -245,9 +248,15 @@ body:has(#contact) button {
     color: white;
 }
 
-#contact div {
+#contact .info {
     text-align: center;
     font-family: Montserrat, sans-serif;
     font-size: 1.25rem;
     margin: 24px;
+}
+
+body:has(#contact) #attribution {
+    position: absolute;
+    bottom: 0;
+    color: white;
 }
