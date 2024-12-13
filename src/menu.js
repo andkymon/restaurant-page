@@ -65,13 +65,16 @@ function loadMenu() {
     //Attribution 
     const attributionDiv = document.createElement("div");
     const attributionSpan = document.createElement("span");
-    const author = document.createElement("a");
+    const author1 = document.createElement("a");
+    const author2 = document.createElement("a");
     const site = document.createElement("a");
-    author.setAttribute("href", "https://unsplash.com/@ahtziri");
-    author.textContent = "Ahtziri Lagarde";
+    author1.setAttribute("href", "https://unsplash.com/@ahtziri");
+    author1.textContent = "Ahtziri Lagarde";
+    author2.setAttribute("href", "https://unsplash.com/@flyd2069");
+    author2.textContent = "FlyD";
     site.setAttribute("href", "https://unsplash.com");
     site.textContent = "Unsplash";
-    attributionSpan.append("Photos by ", author, " on ", site);
+    attributionSpan.append("Photos by ", author1, " and ", author2, " on ", site);
     attributionDiv.append(attributionSpan);
     attributionDiv.setAttribute("id", "attribution");
     menu.append(attributionDiv);
