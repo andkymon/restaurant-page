@@ -4,55 +4,46 @@ import loadMenu from "./menu.js"
 import loadContact from "./contact.js";
 import loadAbout from "./about.js";
 
-//Event listener for document load
-document.addEventListener("DOMContentLoaded", function() {
-    loadHome();
-    contentAnimation()
-});
+(function () {
+    //Event listeners for nav buttons
+    const content = document.querySelector("#content");
+    const buttons = document.querySelectorAll("button");
 
-//Event listeners for nav buttons
-const content = document.querySelector("#content");
-const buttons = document.querySelectorAll("button");
-
-function clearPage() {
-    //Enable all buttons again
-    for (const button of buttons) {
-        button.disabled = false;
+    function clearPage() {
+        const page = document.querySelector(".page");
+        if (page) content.removeChild(page);
     }
-    const page = document.querySelector(".page");
-    content.removeChild(page);
-}
 
-function contentAnimation() {
-    content.classList.remove("load");
-    setTimeout(function() {
-        content.classList.add("load");
-    }, 1);
-}
+    // Disable the active button
+    function updateActiveButton(index) {
+        buttons.forEach((button, i) => {
+            button.disabled = i === index; 
+        });
+    }
 
-buttons[0].addEventListener("click", () => {
-    clearPage();
-    loadHome();
-    contentAnimation();
-    buttons[0].disabled = true;
-});
-buttons[1].addEventListener("click", () => {
-    clearPage();
-    loadMenu();
-    contentAnimation();
-    buttons[1].disabled = true;
-});
-buttons[2].addEventListener("click", () => {
-    clearPage();
-    loadContact();
-    contentAnimation();
-    buttons[2].disabled = true;
-});
-buttons[3].addEventListener("click", () => {
-    clearPage();
-    loadAbout();
-    contentAnimation();
-    buttons[3].disabled = true;
-});
+    function playContentAnimation() {
+        content.classList.remove("load");
+        setTimeout(function() {
+            content.classList.add("load");
+        }, 1);
+    }
 
+    function loadPage(index) {
+        clearPage();
+        updateActiveButton(index);
+        // Load the corresponding page
+        const loaders = [loadHome, loadMenu, loadContact, loadAbout];
+        loaders[index]();
+        playContentAnimation();
+    }
 
+    // Event listener for nav buttons (delegation)
+    buttons.forEach((button, index) => {
+        button.addEventListener("click", () => loadPage(index));
+    });
+
+    //Event listener for document load
+    document.addEventListener("DOMContentLoaded", function() {
+        loadPage(0); // Load the Home page initially
+    });
+})();
