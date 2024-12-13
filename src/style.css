@@ -236,18 +236,13 @@ body:has(#menu){
 body:has(#contact){
     background-color: black;
     background-image: url("./assets/images/contact-background.jpg");
-    background-position: bottom;
-    background-size: 640px;
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 60%;
     color: white;
 }
 
 body:has(#contact) button {
     color: white;
-}
-
-#contact * {
-    backdrop-filter: blur(2px) brightness(50%);
 }
 
 #contact div {
