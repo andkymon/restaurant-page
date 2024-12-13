@@ -96,17 +96,28 @@ body:has(#home) {
     color: white;
 }
 
+body:has(#home) * {
+    color: white;
+}
+
 #attribution {
+    position: absolute;
+    bottom: 0;
     margin-top: 36px;
     font-family: Montserrat, sans-serif;
     font-size: 0.8rem;
     color: black;
     text-align: center;
+    width: 100%;
 }
 
 /*Menu Styling*/
 body:has(#menu){
     background-color: white;
+    color: black;
+}
+
+body:has(#menu) * {
     color: black;
 }
 
