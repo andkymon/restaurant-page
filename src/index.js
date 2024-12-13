@@ -15,6 +15,10 @@ const content = document.querySelector("#content");
 const buttons = document.querySelectorAll("button");
 
 function clearPage() {
+    //Enable all buttons again
+    for (const button of buttons) {
+        button.disabled = false;
+    }
     const page = document.querySelector(".page");
     content.removeChild(page);
 }
@@ -30,21 +34,25 @@ buttons[0].addEventListener("click", () => {
     clearPage();
     loadHome();
     contentAnimation();
+    buttons[0].disabled = true;
 });
 buttons[1].addEventListener("click", () => {
     clearPage();
     loadMenu();
     contentAnimation();
+    buttons[1].disabled = true;
 });
 buttons[2].addEventListener("click", () => {
     clearPage();
     loadContact();
     contentAnimation();
+    buttons[2].disabled = true;
 });
 buttons[3].addEventListener("click", () => {
     clearPage();
     loadAbout();
     contentAnimation();
+    buttons[3].disabled = true;
 });
 
 
