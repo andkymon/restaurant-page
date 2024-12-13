@@ -257,9 +257,7 @@ body:has(#about) button {
 }
 
 #about {
-    display: flex;
-    flex-direction: column;
-    padding: 128px;
+    margin: 128px;
 }
 
 #contact .info,
@@ -273,6 +271,7 @@ body:has(#about) button {
 body:has(#contact) #attribution,
 body:has(#about) #attribution {
     position: absolute;
+    left: 0;
     bottom: 0;
     color: white;
 }
