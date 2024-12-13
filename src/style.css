@@ -87,6 +87,15 @@ nav > button:hover {
     transition: 0.3s;
 }
 
+#attribution {
+    margin-top: 36px;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.8rem;
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+
 /*Homepage Styling*/
 body:has(#home) {
     background-image: url("./assets/images/sushi-background.jpg");
@@ -96,28 +105,18 @@ body:has(#home) {
     color: white;
 }
 
-body:has(#home) * {
+body:has(#home) button {
     color: white;
 }
 
-#attribution {
+body:has(#home) #attribution {
     position: absolute;
     bottom: 0;
-    margin-top: 36px;
-    font-family: Montserrat, sans-serif;
-    font-size: 0.8rem;
-    color: black;
-    text-align: center;
-    width: 100%;
 }
 
 /*Menu Styling*/
 body:has(#menu){
     background-color: white;
-    color: black;
-}
-
-body:has(#menu) * {
     color: black;
 }
 
@@ -183,7 +182,7 @@ body:has(#menu) * {
     filter: blur(2px) brightness(50%);
 }
 
-.card-wrapper:hover > .dish-name {
+.card-wrapper:hover .dish-name {
     padding: 0;
     font-size: 0;
 }
